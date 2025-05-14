@@ -7,6 +7,5 @@ export async function addPhoneController(req: Request, res: Response){
         const result = req.body as InsertPhone;
         await addPhoneService(result);
 
-        res.sendStatus(httpStatus.CREATED);
-        
+        res.sendStatus(httpStatus.CREATED); 
 }

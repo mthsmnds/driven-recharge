@@ -14,7 +14,7 @@ export type Recharge = {
     value:number;
 }
 
-export type Client = {
+export type Customer = {
     cpf:string;
     name:string;
 }
@@ -25,7 +25,7 @@ export type Carrier = {
     code: number;
 }
 
-export type PhoneRecharges = Omit<Phone, "carrier_code"> & {
+export type PhoneRecharges = Omit<Phone, "carrier_id"> & {
     carrier: Carrier;
     recharges: Recharge[];
 }

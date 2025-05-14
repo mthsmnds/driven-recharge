@@ -1,4 +1,4 @@
-CREATE TABLE clients (
+CREATE TABLE customers (
 	id SERIAL PRIMARY KEY,
 	cpf TEXT NOT NULL UNIQUE,
 	name TEXT NOT NULL
@@ -7,7 +7,7 @@ CREATE TABLE clients (
 CREATE TABLE phones (
 	id SERIAL PRIMARY KEY,
 	number TEXT NOT NULL UNIQUE,
-	cpf TEXT NOT NULL REFERENCES clients(cpf),
+	cpf TEXT NOT NULL REFERENCES customers(cpf),
 	carrier_id INT NOT NULL REFERENCES carriers(id),
 	description TEXT NOT NULL
 );

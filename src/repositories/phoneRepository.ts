@@ -6,7 +6,7 @@ export async function addPhoneRepo(phone: InsertPhone){
     const result = await db.query<Phone>(`
         INSERT INTO phones (number, carrier_id, cpf, description)
         VALUES ( $1, $2, $3, $4)
-        RETURNING *
+        RETURNING *;
         `, [number, carrier_id, cpf, description]);
     return result.rows[0];
 }
