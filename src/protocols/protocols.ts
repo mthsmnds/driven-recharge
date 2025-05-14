@@ -14,6 +14,8 @@ export type Recharge = {
     value:number;
 }
 
+export type InsertRecharge = Omit<Recharge, "id">;
+
 export type Customer = {
     cpf:string;
     name:string;
