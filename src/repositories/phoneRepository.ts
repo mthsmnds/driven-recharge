@@ -25,3 +25,4 @@ export async function getPhoneByNumber(number: string) {
     const result = await db.query<Phone>(`SELECT * FROM phones WHERE number = $1`, [number]);
     return result.rows[0];
 }
+
