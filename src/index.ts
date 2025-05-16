@@ -13,6 +13,6 @@ app.use(customerRouter);
 app.use(rechargeRouter);
 app.use(summaryRouter);
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 app.listen(5000, ()=> console.log("Server is running!"));
