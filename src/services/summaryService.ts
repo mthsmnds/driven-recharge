@@ -16,6 +16,7 @@ export async function getSummaryService(cpf: string): Promise<Summary>{
         const phoneDetails: PhoneRecharges ={
             id: phone.id,
             number: phone.number,
+            name:phone.name,
             cpf: phone.cpf,
             description: phone.description,
             carrier: carrier,

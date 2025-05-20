@@ -2,12 +2,12 @@ import db from "../database/database";
 import { InsertPhone, Phone } from "../protocols/protocols";
 
 export async function addPhoneRepo(phone: InsertPhone){
-    const {number, carrier_id, cpf, description} = phone;
+    const {number, carrier_id, name, cpf, description} = phone;
     const result = await db.query<Phone>(`
-        INSERT INTO phones (number, carrier_id, cpf, description)
-        VALUES ( $1, $2, $3, $4)
+        INSERT INTO phones (number, carrier_id, name, cpf, description)
+        VALUES ( $1, $2, $3, $4, $5)
         RETURNING *;
-        `, [number, carrier_id, cpf, description]);
+        `, [number, carrier_id, name, cpf, description]);
     return result.rows[0];
 }
 

@@ -2,6 +2,7 @@ export type Phone = {
     id: number;
     number: string;
     carrier_id: number;
+    name: string;
     cpf: string;
     description: string;
 }
